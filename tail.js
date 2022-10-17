@@ -3,8 +3,5 @@ const assertEqual = (actual, expected) => {
 };
 
 const tail = (array) => {
-  array.splice(1, array.length);
+  return array.slice(1);
 }
-
-tail([1, 2, 3, 4, 5]);
-tail(["a", "b", "c", "d"]);
