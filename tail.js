@@ -6,3 +6,5 @@ const tail = (array) => {
   array.splice(1, array.length);
 }
 
+tail([1, 2, 3, 4, 5]);
+tail(["a", "b", "c", "d"]);
