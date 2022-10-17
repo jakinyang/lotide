@@ -6,7 +6,7 @@ const assertEqual = (actual, expected) => {
 // Tail function
 const tail = (array) => {
   return array.slice(1);
-}
+};
 
 // Test function calls assertEqual not on the array returned by tail, but on the values extracted by the for loop against the value extracted from the "expected" array. I.e. i = 0, j = 0 ... assertEqual(tail[0], expected[0])
 const testFunction = (tail, expected) => {
@@ -15,7 +15,7 @@ const testFunction = (tail, expected) => {
     assertEqual(tail[i], expected[j]);
     j++;
   }
-}
+};
 
 // Calling test function to test tail as opposed to calling assertEqual directly
 testFunction(tail([1, 2, 3]), [2, 3]);
