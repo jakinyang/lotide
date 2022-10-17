@@ -22,6 +22,6 @@ testFunction(tail([1, 2, 3]), [2, 3]);
 testFunction(tail(["Hello", "World", "Again"]), ["World", "Again"]);
 
 // Additional test cases
-words = ["a", "b", "c"];
+const words = ["a", "b", "c"];
 tail(words);
 assertEqual(words.length, 3);
