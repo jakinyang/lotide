@@ -21,4 +21,23 @@ const assertEqual = (actual, expected) => {
 // Extracts the relevant arguments into an array
 const arg = process.argv.slice(2);
 
+// Latinization function
+// More verbose than needs to be, but it doesn't affect function and aids readability
+
+const latinize = word => {
+  // Convert to lowercase
+  word = word.toLowerCase();
+  // Transformed first letter
+  let latinSuffix = `${word[0]}ay`;
+  // 'Root' to attach the transformed first letter
+  let latinRoot = word.slice(1);
+  // Final latinized form
+  let latinWord = `${latinRoot}${latinSuffix}`
+  return latinWord;
+}
+
+// Tests
+/* console.log(latinize('Pig'));
+assertEqual(latinize('Pig'), 'igpay') */
+
 
