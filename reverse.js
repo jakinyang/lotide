@@ -15,7 +15,7 @@ const assertEqual = (actual, expected) => {
 const arg = process.argv.slice(2);
 
 // Test arg array holds correct variables
-console.log(arg);
+// console.log(arg);
 
 // String reversing function
 const reverse = (string) => {
@@ -27,11 +27,12 @@ const reverse = (string) => {
 }
 
 // Test for array
-console.log(reverse('abc'));
-assertEqual(reverse('abc'), 'cba');
+/* console.log(reverse('abc'));
+assertEqual(reverse('abc'), 'cba'); */
 
 // Running reverse() on each element in arg
-arg.forEach(element => {
-  reverse(element);
+  arg.forEach(element => {
+  console.log(reverse(element));
 })
+
 
