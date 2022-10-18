@@ -19,7 +19,7 @@ const assertEqual = (actual, expected) => {
 };
 
 // Extracts the relevant arguments into an array
-const arg = process.argv.slice(2);
+let arg = process.argv.slice(2);
 
 // Latinization function
 // More verbose than needs to be, but it doesn't affect function and aids readability
@@ -40,4 +40,11 @@ const latinize = word => {
 /* console.log(latinize('Pig'));
 assertEqual(latinize('Pig'), 'igpay') */
 
-
+// Applying latinize to each argument
+// Output string to collect all 
+let outputArr = [];
+arg.forEach(word => {
+  outputArr.push(latinize(word));
+});
+outputArr = outputArr.join(' ');
+console.log(outputArr);
