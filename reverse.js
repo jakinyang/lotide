@@ -25,5 +25,13 @@ const reverse = (string) => {
   }
   return reverseWord;
 }
-reverse('abc');
+
+// Test for array
 console.log(reverse('abc'));
+assertEqual(reverse('abc'), 'cba');
+
+// Running reverse() on each element in arg
+arg.forEach(element => {
+  reverse(element);
+})
+
