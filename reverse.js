@@ -1,4 +1,4 @@
-/* 
+/*
 Calling the function in node with arguments inputs those arguments into the function.
 
 This will probably require using command line arguments
@@ -20,19 +20,19 @@ const arg = process.argv.slice(2);
 // String reversing function
 const reverse = (string) => {
   let reverseWord = '';
-  for (let i = string.length -1; i >= 0; i--) {
+  for (let i = string.length - 1; i >= 0; i--) {
     reverseWord += `${string[i]}`;
   }
   return reverseWord;
-}
+};
 
 // Test for array
 /* console.log(reverse('abc'));
 assertEqual(reverse('abc'), 'cba'); */
 
 // Running reverse() on each element in arg
-  arg.forEach(element => {
+arg.forEach(element => {
   console.log(reverse(element));
-})
+});
 
 
