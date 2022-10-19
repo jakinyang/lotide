@@ -24,7 +24,17 @@ const isEven = function(num) {
 
 const middle = function(array) {
   let returnArray = [];
+  let middle = Math.floor(array.length/2);
   if (array.length < 3) return returnArray;
-  
+  if (isEven(array.length)) {
+    // Grab two middle variables
+    returnArray.push(array[middle - 1], array[middle]);
+  } else {
+    // Grab single middle variable
+    returnArray.push(array[middle]);
+  }
+  return returnArray;
 }
 
+assertArraysEqual(middle([1, 2, 3]), [2]);
+assertArraysEqual(middle([1, 2, 3, 4]), [2, 3]);
