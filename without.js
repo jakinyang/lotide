@@ -15,23 +15,29 @@ const assertArraysEqual = (arr1, arr2) => {
 }
 
 const without = (array, targets) => {
+  // Output array to modify
+  let outputArray = Array.from(array);
   // Iterate through the elements in the array
-  for (let i = 0; i < array.length; i++) {
-    // For each element, iterate over the targets
-    for (let target of targets) {
-      console.log(array);
-      console.log(target);
-      console.log(array[i]);
+  for (let target of targets) {
+  // For each element, iterate over the targets
+    for (let i = 0; i < outputArray.length; i++) {  
       // Compare each target to current element, if match, then splice
-      if (array[i] === target) array.splice(i, 1);
-      console.log(array);
+      if (outputArray[i] === target) {
+        outputArray.splice(i, 1);
+        // Decrement index counter to account for shortened array length after splice
+        i--;
+      }
     }
   }
   // After all targets matched to elements, return spliced array
-  return array;
+  return outputArray;
 }
-
+// Tests
 /* assertArraysEqual(without([], []), []);
 assertArraysEqual(without([1, 2, 3], [3]), [1, 2]);
-assertArraysEqual(without([3, 1, 3, 4, 1, 2, 3], [2, 5]), [3, 1, 3, 4, 1, 3]); */
-assertArraysEqual(without([1, 3, 4, 1, 4, 1, 4, 1, 3, 2, 3], [1, 2, 3, 4]), []);
+assertArraysEqual(without([3, 1, 3, 4, 1, 2, 3], [2, 5]), [3, 1, 3, 4, 1, 3]);
+assertArraysEqual(without([1, 3, 4, 1, 4, 1, 4, 1, 3, 2, 3], [1, 2, 3]), [4, 4, 4]);
+const words = ["hello", "world", "lighthouse"];
+without(words, ["lighthouse"]); // no need to capture return value for this test case
+// Make sure the original array was not altered by the without function
+assertArraysEqual(words, ["hello", "world", "lighthouse"]); */
