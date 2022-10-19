@@ -4,7 +4,7 @@ const assertEqual = (actual, expected) => {
 
 const eqArrays = (arr1, arr2) => {
   // Check if lengths are the same?
-  if (arr1.length !== arr2.length) return "Array lengths unequal"
+  if (arr1.length !== arr2.length) return false;
   // Single loop to loop over both arrays - since both are the same length
   for (let i = 0; i < arr1.length; i++) {
     // Compare each value
