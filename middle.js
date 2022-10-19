@@ -27,3 +27,4 @@ const middle = function(array) {
   if (array.length < 3) return returnArray;
   
 }
+
