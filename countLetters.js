@@ -15,6 +15,7 @@ const countLetters = function(string) {
   for (let char of string) {
     charCountObj[char] ? charCountObj[char]++ : charCountObj[char] = 1;
   }
+  return charCountObj;
 }
 
 assertEqual(countLetters('abccba'), {a: 2, b: 2, c: 2});
