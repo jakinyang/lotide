@@ -22,9 +22,8 @@ const assertArraysEqual = (arr1, arr2) => {
 
 const letterPositions = function (string) {
   charPositionObj = {};
-  for (let index in string) {
-    // charPositionObj[char] ? charPositionObj[char].push(String.indexOf(char)) : charPositionObj[char] = 1;
-    console.log(index);
+  for (let i in string) {
+    charPositionObj[string[i]] ? charPositionObj[string[i]].push(Number(i)) : charPositionObj[string[i]] = [Number(i)];
   }
   return charPositionObj;
 }
@@ -33,6 +32,6 @@ const letterPositions = function (string) {
 const test1 = letterPositions('abccba');
 const test2 = letterPositions('aaabbbccc');
 const test3 = letterPositions('zzabcab');
-assertArraysEqual(test1.a, 2);
-assertArraysEqual(test2.c, 3);
-assertArraysEqual(test3.c, 1);
+assertArraysEqual(test1.a, [0, 5]);
+assertArraysEqual(test2.c, [6, 7, 8]);
+assertArraysEqual(test3.c, [4]);
