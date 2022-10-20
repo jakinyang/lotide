@@ -26,12 +26,13 @@ const eqArrays = (arr1, arr2) => {
 const eqObjects = function (object1, object2) {
   if(Object.keys(object1).length !== Object.keys(object2).length) return false;
   for (let key in object1) {
+    if (!object2[key]) return false;
     if (Array.isArray(object1[key])) {
-      if (!object2[key] || eqArrays(object1[key], object2[key]) !== true) return false;
+      if (eqArrays(object1[key], object2[key]) !== true) return false;
     } else if (typeof object1[key] === 'object') {
-      if (!object2[key] || eqObjects(object1[key], object2[key]) !== true) return false;
+      if (eqObjects(object1[key], object2[key]) !== true) return false;
     } else {
-      if (!object2[key] || object1[key] !== object2[key]) return false;
+      if (object1[key] !== object2[key]) return false;
     }
   }
   return true;
