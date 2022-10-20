@@ -6,10 +6,6 @@ This will likely follow the same process as assertArraysEqual
 
 */
 
-const assertArraysEqual = (arr1, arr2) => {
-  eqArrays(arr1, arr2) ? console.log(`🌲🌲🌲 Assertion Passed: ${arr1} === ${arr2}`) : console.log(`🍄🍄🍄 Assertion Failed: ${arr1} !== ${arr2}`);
-}
-
 const eqArrays = (arr1, arr2) => {
   // Check if lengths are the same?
   if (arr1.length !== arr2.length) return "Array lengths unequal"
