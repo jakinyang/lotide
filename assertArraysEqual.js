@@ -1,7 +1,3 @@
-const assertEqual = (actual, expected) => {
-  actual === expected ? console.log(`🌲🌲🌲 Assertion Passed: ${actual} === ${expected}`) : console.log(`🍄🍄🍄 Assertion Failed: ${actual} !== ${expected}`);
-};
-
 const eqArrays = (arr1, arr2) => {
   // Check if lengths are the same?
   if (arr1.length !== arr2.length) return false;
