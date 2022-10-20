@@ -17,5 +17,9 @@ const countLetters = function(string) {
   }
   return charCountObj;
 }
-
-assertEqual(countLetters('abccba'), {a: 2, b: 2, c: 2});
+const test1 = countLetters('abccba');
+const test2 = countLetters('aaabbbccc');
+const test3 = countLetters('zzabcab');
+assertEqual(test1.a, 2);
+assertEqual(test2.c, 3);
+assertEqual(test3.c, 1);
