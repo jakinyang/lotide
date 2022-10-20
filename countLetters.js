@@ -17,6 +17,8 @@ const countLetters = function(string) {
   }
   return charCountObj;
 }
+
+// Tests
 const test1 = countLetters('abccba');
 const test2 = countLetters('aaabbbccc');
 const test3 = countLetters('zzabcab');
