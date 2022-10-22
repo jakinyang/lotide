@@ -13,6 +13,7 @@ const assertEqual = (actual, expected) => {
 const countLetters = function(string) {
   charCountObj = {};
   for (let char of string) {
+    if (char === ' ') continue;
     charCountObj[char] ? charCountObj[char]++ : charCountObj[char] = 1;
   }
   return charCountObj;
