@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@jakinbacon/lotide",
   "version": "1.0.0",
-  "description": "Lotide Library",
+  "description": "Lotide Library, a student project copy of the Lodash Library",
   "main": "index.js",
   "directories": {
     "test": "test"
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/jakinyang/lotide.git"
   },
-  "author": "",
+  "author": "Jae Chun Yang",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/jakinyang/lotide/issues"
