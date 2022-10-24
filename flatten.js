@@ -43,9 +43,4 @@ const flatten = (array) => {
   return outputArray;
 }
 
-
-// Tests
-/* 
-console.log(flatten([1, 2, 3, 4, [1, 3], 4, 5]));
-console.log(flatten([1, 2, 3, 4, [1, [1, 2, [1, 2, 3, 4],3, 4],3], 4, 5, [1, 2, 3, 4, [1, 2, 3, 4], 1], 3]));
- */
+module.exports = {flatten: flatten, arrayIdentifier: arrayIdentifier, arrayIterator: arrayIterator};

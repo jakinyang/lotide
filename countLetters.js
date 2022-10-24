@@ -6,10 +6,6 @@ Pseudocode
 2. Iterating over the string, conditionals will either instantiate that key-value as letter: 1, or it will increment it (++), just like in countOnly, except this one will not have a condition to count only specific letters/items.
 */
 
-const assertEqual = (actual, expected) => {
-  actual === expected ? console.log(`🌲🌲🌲 Assertion Passed: ${actual} === ${expected}`) : console.log(`🍄🍄🍄 Assertion Failed: ${actual} !== ${expected}`);
-};
-
 const countLetters = function(string) {
   charCountObj = {};
   for (let char of string) {
@@ -19,10 +15,4 @@ const countLetters = function(string) {
   return charCountObj;
 }
 
-// Tests
-const test1 = countLetters('abccba');
-const test2 = countLetters('aaabbbccc');
-const test3 = countLetters('zzabcab');
-assertEqual(test1.a, 2);
-assertEqual(test2.c, 3);
-assertEqual(test3.c, 1);
+module.exports = countLetters;

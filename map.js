@@ -11,8 +11,4 @@ const map = (array, callback) => {
   return outputArray;
 }
 
-
-// Test data
-const words = ["ground", "control", "to", "major", "tom"];
-const results = map(words, word => word[0]);
-console.log(results); 
+module.exports = map;
