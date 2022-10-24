@@ -1,6 +1,6 @@
 {
   "name": "@jakinbacon/lotide",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Lotide Library, a student project copy of the Lodash Library",
   "main": "index.js",
   "directories": {
